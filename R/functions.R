@@ -4,6 +4,7 @@
 #' @param col_of_interest A column of the `unemp_data` data frame that you wish to select.
 #' @importFrom janitor clean_names
 #' @importFrom dplyr filter select
+#' @importFrom rlang enquo `!!`
 #' @return A data frame
 #' @export
 #' @details
@@ -13,18 +14,23 @@
 #' `level` must be predicate condition passed down to dplyr::filter. See the examples below
 #' for its usage.
 #' @examples
+#' \dontrun{
 #' # Filter on cantons
-#' clean_unemp(unemp_2013,
+#' clean_unemp(unemp,
 #'             grepl("Canton", commune),
 #'             active_population)
 #' # Filter on a specific commune
-#' clean_unemp(unemp_2013,
+#' clean_unemp(unemp,
 #'             grepl("Kayl", commune),
 #'             active_population)
+#'}
 clean_unemp <- function(unemp_data, level, col_of_interest){
 
+  level <- enquo(level)
+  col_of_interest <- enquo(col_of_interest)
+
   unemp_data |>
-    janitor::clean_names() |>
-    dplyr::filter({{level}}) |>
-    dplyr::select(year, commune, {{col_of_interest}})
+    clean_names() |>
+    filter((!!level)) |>
+    select(year, commune, !!col_of_interest)
 }

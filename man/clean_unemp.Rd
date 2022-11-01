@@ -27,12 +27,14 @@ nor the whole country, so the communes. Individual communes can be selected as w
 for its usage.
 }
 \examples{
+\dontrun{
 # Filter on cantons
-clean_unemp(unemp_2013,
+clean_unemp(unemp,
             grepl("Canton", commune),
             active_population)
 # Filter on a specific commune
-clean_unemp(unemp_2013,
+clean_unemp(unemp,
             grepl("Kayl", commune),
             active_population)
+}
 }
