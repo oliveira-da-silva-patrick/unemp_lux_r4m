@@ -10,6 +10,7 @@ License: GPL (>=3)
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.2.1
+RemoteType: github
 Depends:
     R (>= 4.1)
 Imports:
