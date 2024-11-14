@@ -1,0 +1,792 @@
+
+R version 4.4.2 (2024-10-31) -- "Pile of Leaves"
+Copyright (C) 2024 The R Foundation for Statistical Computing
+Platform: aarch64-apple-darwin20
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> renv::init()
+This project contains a DESCRIPTION file.
+Which files should renv use for dependency discovery in this project? 
+
+1: Use only the DESCRIPTION file. (explicit mode)
+2: Use all files in this project. (implicit mode)
+
+Selection: 1
+- Using 'explicit' snapshot type. Please see `?renv::snapshot` for more details.
+
+- Linking packages into the project library ... [61/61] Done!
+- Resolving missing dependencies ... 
+# Downloading packages ----------------------------
+- Downloading reader from CRAN ...              OK [109.5 Kb in 1.4s]
+- Downloading NCmisc from CRAN ...              OK [286.3 Kb in 1.3s]
+Successfully downloaded 2 packages in 16 seconds.
+
+# Installing packages -----------------------------
+- Installing NCmisc ...                         OK [installed binary and cached]
+- Installing reader ...                         OK [installed binary and cached]
+The following package(s) will be updated in the lockfile:
+
+# CRAN --------------------------------------------
+- cli          [* -> 3.6.3]
+- cpp11        [* -> 0.5.0]
+- dplyr        [* -> 1.1.4]
+- fansi        [* -> 1.0.6]
+- generics     [* -> 0.1.3]
+- glue         [* -> 1.8.0]
+- hms          [* -> 1.1.3]
+- janitor      [* -> 2.2.0]
+- lifecycle    [* -> 1.0.4]
+- lubridate    [* -> 1.9.3]
+- magrittr     [* -> 2.0.3]
+- pillar       [* -> 1.9.0]
+- pkgconfig    [* -> 2.0.3]
+- purrr        [* -> 1.0.2]
+- R6           [* -> 2.5.1]
+- renv         [* -> 1.0.11]
+- rlang        [* -> 1.1.4]
+- snakecase    [* -> 0.11.1]
+- stringi      [* -> 1.8.4]
+- stringr      [* -> 1.5.1]
+- tibble       [* -> 3.2.1]
+- tidyr        [* -> 1.3.1]
+- tidyselect   [* -> 1.2.1]
+- timechange   [* -> 0.3.0]
+- utf8         [* -> 1.2.4]
+- vctrs        [* -> 0.6.5]
+- withr        [* -> 3.0.2]
+
+The version of R recorded in the lockfile will be updated:
+- R            [* -> 4.4.2]
+
+- Lockfile written to "~/Desktop/active_wbs/ws2-rpa/unemp_lux_r4m/renv.lock".
+
+Restarting R session...
+
+- Project '~/Desktop/active_wbs/ws2-rpa/unemp_lux_r4m' loaded. [renv 1.0.11]
+> install.packages("testthat")
+The following package(s) will be installed:
+- testthat [3.2.1.1]
+These packages will be installed into "~/Library/Caches/org.R-project.R/R/renv/library/unemp_lux_r4m-2ed6f567/macos/R-4.4/aarch64-apple-darwin20".
+
+Do you want to proceed? [Y/n]: y
+
+# Installing packages -----------------------------
+- Installing testthat ...                       OK [linked from cache]
+Successfully installed 1 package in 13 milliseconds.
+> install.packages("usethis")
+# Downloading packages ----------------------------
+- Downloading usethis from CRAN ...             OK [897.1 Kb in 0.6s]
+- Downloading clipr from CRAN ...               OK [50.5 Kb in 0.93s]
+- Downloading curl from CRAN ...                OK [765.1 Kb in 1.0s]
+- Downloading gert from CRAN ...                OK [2.6 Mb in 1.8s]
+- Downloading askpass from CRAN ...             OK [21.6 Kb in 0.94s]
+- Downloading sys from CRAN ...                 OK [40.2 Kb in 0.48s]
+- Downloading credentials from CRAN ...         OK [215.9 Kb in 1.3s]
+- Downloading openssl from CRAN ...             OK [3.4 Mb in 0.67s]
+- Downloading rstudioapi from CRAN ...          OK [311.1 Kb in 0.52s]
+- Downloading zip from CRAN ...                 OK [197.9 Kb in 0.53s]
+- Downloading gh from CRAN ...                  OK [117 Kb in 1.2s]
+- Downloading gitcreds from CRAN ...            OK [96.6 Kb in 0.51s]
+- Downloading httr2 from CRAN ...               OK [630.1 Kb in 1.5s]
+- Downloading ini from CRAN ...                 OK [13.5 Kb in 0.96s]
+- Downloading whisker from CRAN ...             OK [65 Kb in 0.49s]
+Successfully downloaded 15 packages in 14 seconds.
+
+The following package(s) will be installed:
+- askpass     [1.2.1]
+- clipr       [0.8.0]
+- credentials [2.0.2]
+- curl        [6.0.0]
+- gert        [2.1.4]
+- gh          [1.4.1]
+- gitcreds    [0.1.2]
+- httr2       [1.0.6]
+- ini         [0.3.1]
+- openssl     [2.2.2]
+- rstudioapi  [0.17.1]
+- sys         [3.4.3]
+- usethis     [3.0.0]
+- whisker     [0.4.1]
+- zip         [2.3.1]
+These packages will be installed into "~/Library/Caches/org.R-project.R/R/renv/library/unemp_lux_r4m-2ed6f567/macos/R-4.4/aarch64-apple-darwin20".
+
+Do you want to proceed? [Y/n]: y
+
+# Installing packages -----------------------------
+- Installing clipr ...                          OK [installed binary and cached]
+- Installing curl ...                           OK [installed binary and cached]
+- Installing sys ...                            OK [installed binary and cached]
+- Installing askpass ...                        OK [installed binary and cached]
+- Installing openssl ...                        OK [installed binary and cached]
+- Installing credentials ...                    OK [installed binary and cached]
+- Installing rstudioapi ...                     OK [installed binary and cached]
+- Installing zip ...                            OK [installed binary and cached]
+- Installing gert ...                           OK [installed binary and cached]
+- Installing gitcreds ...                       OK [installed binary and cached]
+- Installing httr2 ...                          OK [installed binary and cached]
+- Installing ini ...                            OK [installed binary and cached]
+- Installing gh ...                             OK [installed binary and cached]
+- Installing whisker ...                        OK [installed binary and cached]
+- Installing usethis ...                        OK [installed binary and cached]
+Successfully installed 15 packages in 0.86 seconds.
+> usethis::use_test("clean_unemp")
+✔ Setting active project to
+  "/Users/patrick/Desktop/active_wbs/ws2-rpa/unemp_lux_r4m".
+✔ Increasing testthat version to ">= 3.0.0" in
+  DESCRIPTION.
+✔ Adding "3" to Config/testthat/edition.
+✔ Creating tests/testthat/.
+✔ Writing tests/testthat.R.
+✔ Writing tests/testthat/test-clean_unemp.R.
+☐ Modify tests/testthat/test-clean_unemp.R.
+> devtools::test(".")
+Error in loadNamespace(x) : there is no package called ‘devtools’
+> install.packages("devtools")
+# Downloading packages ----------------------------
+- Downloading devtools from CRAN ...            OK [427.1 Kb in 6.9s]
+- Downloading ellipsis from CRAN ...            OK [33.9 Kb in 0.57s]
+- Downloading miniUI from CRAN ...              OK [34.8 Kb in 0.5s]
+- Downloading shiny from CRAN ...               OK [4.8 Mb in 0.68s]
+- Downloading httpuv from CRAN ...              OK [594.3 Kb in 0.55s]
+- Downloading later from CRAN ...               OK [122.6 Kb in 0.51s]
+- Downloading Rcpp from CRAN ...                OK [2.1 Mb in 0.56s]
+- Downloading promises from CRAN ...            OK [1.6 Mb in 0.64s]
+- Downloading xtable from CRAN ...              OK [691.5 Kb in 0.56s]
+- Downloading sourcetools from CRAN ...         OK [42.8 Kb in 0.49s]
+- Downloading commonmark from CRAN ...          OK [125.1 Kb in 0.53s]
+- Downloading pkgdown from CRAN ...             OK [892.2 Kb in 0.55s]
+- Downloading downlit from CRAN ...             OK [111.2 Kb in 0.49s]
+- Downloading ragg from CRAN ...                OK [2.1 Mb in 0.61s]
+- Downloading systemfonts from CRAN ...         OK [1.1 Mb in 0.57s]
+- Downloading textshaping from CRAN ...         OK [1 Mb in 0.56s]
+- Downloading rmarkdown from CRAN ...           OK [2.1 Mb in 0.63s]
+- Downloading knitr from CRAN ...               OK [1.1 Mb in 0.64s]
+- Downloading xml2 from CRAN ...                OK [277 Kb in 0.52s]
+- Downloading profvis from CRAN ...             OK [336.4 Kb in 0.51s]
+- Downloading htmlwidgets from CRAN ...         OK [792.8 Kb in 0.54s]
+- Downloading rcmdcheck from CRAN ...           OK [167.4 Kb in 0.51s]
+- Downloading prettyunits from CRAN ...         OK [149.9 Kb in 0.55s]
+- Downloading sessioninfo from CRAN ...         OK [178.4 Kb in 0.52s]
+- Downloading xopen from CRAN ...               OK [25.1 Kb in 0.51s]
+- Downloading remotes from CRAN ...             OK [427.5 Kb in 0.52s]
+- Downloading roxygen2 from CRAN ...            OK [720.5 Kb in 0.56s]
+- Downloading brew from CRAN ...                OK [75.6 Kb in 0.5s]
+- Downloading rversions from CRAN ...           OK [64.2 Kb in 0.49s]
+- Downloading urlchecker from CRAN ...          OK [33.4 Kb in 0.5s]
+Successfully downloaded 30 packages in 25 seconds.
+
+The following package(s) will be installed:
+- brew        [1.0-10]
+- commonmark  [1.9.2]
+- devtools    [2.4.5]
+- downlit     [0.4.4]
+- ellipsis    [0.3.2]
+- htmlwidgets [1.6.4]
+- httpuv      [1.6.15]
+- knitr       [1.49]
+- later       [1.3.2]
+- miniUI      [0.1.1.1]
+- pkgdown     [2.1.1]
+- prettyunits [1.2.0]
+- profvis     [0.4.0]
+- promises    [1.3.0]
+- ragg        [1.3.3]
+- rcmdcheck   [1.4.0]
+- Rcpp        [1.0.13-1]
+- remotes     [2.5.0]
+- rmarkdown   [2.29]
+- roxygen2    [7.3.2]
+- rversions   [2.1.2]
+- sessioninfo [1.2.2]
+- shiny       [1.9.1]
+- sourcetools [0.1.7-1]
+- systemfonts [1.1.0]
+- textshaping [0.4.0]
+- urlchecker  [1.0.1]
+- xml2        [1.3.6]
+- xopen       [1.0.1]
+- xtable      [1.8-4]
+These packages will be installed into "~/Library/Caches/org.R-project.R/R/renv/library/unemp_lux_r4m-2ed6f567/macos/R-4.4/aarch64-apple-darwin20".
+
+Do you want to proceed? [Y/n]: y
+
+# Installing packages -----------------------------
+- Installing ellipsis ...                       OK [installed binary and cached]
+- Installing Rcpp ...                           OK [installed binary and cached in 0.34s]
+- Installing later ...                          OK [installed binary and cached]
+- Installing promises ...                       OK [installed binary and cached]
+- Installing httpuv ...                         OK [installed binary and cached]
+- Installing xtable ...                         OK [installed binary and cached]
+- Installing sourcetools ...                    OK [installed binary and cached]
+- Installing commonmark ...                     OK [installed binary and cached]
+- Installing shiny ...                          OK [installed binary and cached in 0.22s]
+- Installing miniUI ...                         OK [installed binary and cached]
+- Installing downlit ...                        OK [installed binary and cached]
+- Installing systemfonts ...                    OK [installed binary and cached]
+- Installing textshaping ...                    OK [installed binary and cached]
+- Installing ragg ...                           OK [installed binary and cached]
+- Installing knitr ...                          OK [installed binary and cached in 0.11s]
+- Installing rmarkdown ...                      OK [built from source and cached in 3.6s]
+- Installing xml2 ...                           OK [installed binary and cached]
+- Installing pkgdown ...                        OK [installed binary and cached in 0.11s]
+- Installing htmlwidgets ...                    OK [installed binary and cached]
+- Installing profvis ...                        OK [installed binary and cached]
+- Installing prettyunits ...                    OK [installed binary and cached]
+- Installing sessioninfo ...                    OK [installed binary and cached]
+- Installing xopen ...                          OK [installed binary and cached]
+- Installing rcmdcheck ...                      OK [installed binary and cached]
+- Installing remotes ...                        OK [installed binary and cached]
+- Installing brew ...                           OK [installed binary and cached]
+- Installing roxygen2 ...                       OK [installed binary and cached]
+- Installing rversions ...                      OK [installed binary and cached]
+- Installing urlchecker ...                     OK [installed binary and cached]
+- Installing devtools ...                       OK [installed binary and cached]
+Successfully installed 30 packages in 5.9 seconds.
+> devtools::test(".")
+ℹ Testing unemp_lux_r4m
+✔ | F W  S  OK | Context
+✔ |          1 | clean_unemp                       
+
+══ Results ════════════════════════════════════════
+[ FAIL 0 | WARN 0 | SKIP 0 | PASS 1 ]
+> devtools::test(".")
+ℹ Testing unemp_lux_r4m
+✔ | F W  S  OK | Context
+✖ | 1 2      0 | clean_unemp                       
+───────────────────────────────────────────────────
+Warning (test-clean_unemp.R:2:3): multiplication works
+`expect_equal_to_reference()` was deprecated in the 3rd edition.
+i Please use `expect_snapshot_value()` instead
+Backtrace:
+    ▆
+ 1. └─testthat::expect_equal_to_reference(2 * 2, 4) at test-clean_unemp.R:2:3
+ 2.   └─testthat:::edition_deprecate(...)
+
+Warning (test-clean_unemp.R:2:3): multiplication works
+`expect_known_value()` was deprecated in the 3rd edition.
+i Please use `expect_snapshot_value()` instead
+Backtrace:
+    ▆
+ 1. └─testthat::expect_equal_to_reference(2 * 2, 4) at test-clean_unemp.R:2:3
+ 2.   └─testthat::expect_known_value(..., update = update)
+ 3.     └─testthat:::edition_deprecate(3, "expect_known_value()", "Please use `expect_snapshot_value()` instead")
+
+Error (test-clean_unemp.R:2:3): multiplication works
+Error in `file.exists(file)`: invalid 'file' argument
+Backtrace:
+    ▆
+ 1. └─testthat::expect_equal_to_reference(2 * 2, 4) at test-clean_unemp.R:2:3
+ 2.   └─testthat::expect_known_value(..., update = update)
+ 3.     └─base::file.exists(file)
+───────────────────────────────────────────────────
+
+══ Results ════════════════════════════════════════
+── Failed tests ───────────────────────────────────
+Error (test-clean_unemp.R:2:3): multiplication works
+Error in `file.exists(file)`: invalid 'file' argument
+Backtrace:
+    ▆
+ 1. └─testthat::expect_equal_to_reference(2 * 2, 4) at test-clean_unemp.R:2:3
+ 2.   └─testthat::expect_known_value(..., update = update)
+ 3.     └─base::file.exists(file)
+
+[ FAIL 1 | WARN 2 | SKIP 0 | PASS 0 ]
+> devtools::test(".")
+ℹ Testing unemp_lux_r4m
+✔ | F W  S  OK | Context
+✔ |          1 | clean_unemp                       
+
+══ Results ════════════════════════════════════════
+[ FAIL 0 | WARN 0 | SKIP 0 | PASS 1 ]
+> devtools::test(".")
+ℹ Testing unemp_lux_r4m
+✔ | F W  S  OK | Context
+✔ |          2 | clean_unemp                       
+
+══ Results ════════════════════════════════════════
+[ FAIL 0 | WARN 0 | SKIP 0 | PASS 2 ]
+> devtools::load_all()
+ℹ Loading unemp_lux_r4m
+> unemp_2013 <- readr::read_csv("https://raw.githubusercontent.com/b-rodrigues/modern_R/master/datasets/unemployment/unemp_2013.csv")
+Error in loadNamespace(x) : there is no package called ‘readr’
+> install.packages("tidyverse")
+# Downloading packages ----------------------------
+- Downloading tidyverse from CRAN ...           OK [415.2 Kb in 1.4s]
+- Downloading broom from CRAN ...               OK [1.8 Mb in 1.5s]
+- Downloading backports from CRAN ...           OK [114.6 Kb in 0.51s]
+- Downloading conflicted from CRAN ...          OK [54.5 Kb in 0.91s]
+- Downloading dbplyr from CRAN ...              OK [1.2 Mb in 0.69s]
+- Downloading blob from CRAN ...                OK [47.3 Kb in 0.62s]
+- Downloading DBI from CRAN ...                 OK [905.4 Kb in 0.54s]
+- Downloading dtplyr from CRAN ...              OK [350 Kb in 0.7s]
+- Downloading data.table from CRAN ...          OK [2.3 Mb in 0.61s]
+- Downloading forcats from CRAN ...             OK [412.5 Kb in 1.3s]
+- Downloading ggplot2 from CRAN ...             OK [4.8 Mb in 0.72s]
+- Downloading gtable from CRAN ...              OK [235 Kb in 0.66s]
+- Downloading isoband from CRAN ...             OK [1.6 Mb in 0.6s]
+- Downloading scales from CRAN ...              OK [700.6 Kb in 0.54s]
+- Downloading farver from CRAN ...              OK [1.4 Mb in 0.56s]
+- Downloading labeling from CRAN ...            OK [60.3 Kb in 0.5s]
+- Downloading munsell from CRAN ...             OK [238 Kb in 0.61s]
+- Downloading colorspace from CRAN ...          OK [2.5 Mb in 0.71s]
+- Downloading RColorBrewer from CRAN ...        OK [51.1 Kb in 0.68s]
+- Downloading viridisLite from CRAN ...         OK [1.2 Mb in 0.58s]
+- Downloading googledrive from CRAN ...         OK [1.8 Mb in 0.57s]
+- Downloading gargle from CRAN ...              OK [765.3 Kb in 0.57s]
+- Downloading httr from CRAN ...                OK [475.6 Kb in 0.53s]
+- Downloading uuid from CRAN ...                OK [46.5 Kb in 0.48s]
+- Downloading googlesheets4 from CRAN ...       OK [509 Kb in 1.4s]
+- Downloading cellranger from CRAN ...          OK [101.9 Kb in 1.3s]
+- Downloading rematch from CRAN ...             OK [16.4 Kb in 0.91s]
+- Downloading ids from CRAN ...                 OK [118.9 Kb in 1.2s]
+- Downloading haven from CRAN ...               OK [371.5 Kb in 2.0s]
+- Downloading readr from CRAN ...               OK [800.1 Kb in 0.6s]
+- Downloading vroom from CRAN ...               OK [866.2 Kb in 0.55s]
+- Downloading bit64 from CRAN ...               OK [484.5 Kb in 0.59s]
+- Downloading bit from CRAN ...                 OK [1.1 Mb in 0.98s]
+- Downloading tzdb from CRAN ...                OK [645.2 Kb in 0.58s]
+- Downloading progress from CRAN ...            OK [85.5 Kb in 3.1s]
+- Downloading modelr from CRAN ...              OK [197.2 Kb in 1.4s]
+- Downloading readxl from CRAN ...              OK [839.6 Kb in 0.53s]
+- Downloading reprex from CRAN ...              OK [483.5 Kb in 1.0s]
+- Downloading rvest from CRAN ...               OK [294 Kb in 1.2s]
+- Downloading selectr from CRAN ...             OK [478.9 Kb in 1.4s]
+Successfully downloaded 40 packages in 39 seconds.
+
+The following package(s) will be installed:
+- backports     [1.5.0]
+- bit           [4.5.0]
+- bit64         [4.5.2]
+- blob          [1.2.4]
+- broom         [1.0.7]
+- cellranger    [1.1.0]
+- colorspace    [2.1-1]
+- conflicted    [1.2.0]
+- data.table    [1.16.2]
+- DBI           [1.2.3]
+- dbplyr        [2.5.0]
+- dtplyr        [1.3.1]
+- farver        [2.1.2]
+- forcats       [1.0.0]
+- gargle        [1.5.2]
+- ggplot2       [3.5.1]
+- googledrive   [2.1.1]
+- googlesheets4 [1.1.1]
+- gtable        [0.3.6]
+- haven         [2.5.4]
+- httr          [1.4.7]
+- ids           [1.0.1]
+- isoband       [0.2.7]
+- labeling      [0.4.3]
+- modelr        [0.1.11]
+- munsell       [0.5.1]
+- progress      [1.2.3]
+- RColorBrewer  [1.1-3]
+- readr         [2.1.5]
+- readxl        [1.4.3]
+- rematch       [2.0.0]
+- reprex        [2.1.1]
+- rvest         [1.0.4]
+- scales        [1.3.0]
+- selectr       [0.4-2]
+- tidyverse     [2.0.0]
+- tzdb          [0.4.0]
+- uuid          [1.2-1]
+- viridisLite   [0.4.2]
+- vroom         [1.6.5]
+These packages will be installed into "~/Library/Caches/org.R-project.R/R/renv/library/unemp_lux_r4m-2ed6f567/macos/R-4.4/aarch64-apple-darwin20".
+
+Do you want to proceed? [Y/n]: y
+
+# Installing packages -----------------------------
+- Installing backports ...                      OK [installed binary and cached]
+- Installing broom ...                          OK [installed binary and cached]
+- Installing conflicted ...                     OK [installed binary and cached]
+- Installing blob ...                           OK [installed binary and cached]
+- Installing DBI ...                            OK [installed binary and cached]
+- Installing dbplyr ...                         OK [installed binary and cached]
+- Installing data.table ...                     OK [installed binary and cached in 0.11s]
+- Installing dtplyr ...                         OK [installed binary and cached]
+- Installing forcats ...                        OK [installed binary and cached]
+- Installing gtable ...                         OK [installed binary and cached]
+- Installing isoband ...                        OK [installed binary and cached]
+- Installing farver ...                         OK [installed binary and cached]
+- Installing labeling ...                       OK [installed binary and cached]
+- Installing colorspace ...                     OK [installed binary and cached in 0.12s]
+- Installing munsell ...                        OK [installed binary and cached]
+- Installing RColorBrewer ...                   OK [installed binary and cached]
+- Installing viridisLite ...                    OK [installed binary and cached]
+- Installing scales ...                         OK [installed binary and cached]
+- Installing ggplot2 ...                        OK [installed binary and cached]
+- Installing httr ...                           OK [installed binary and cached]
+- Installing gargle ...                         OK [installed binary and cached]
+- Installing uuid ...                           OK [installed binary and cached]
+- Installing googledrive ...                    OK [installed binary and cached]
+- Installing rematch ...                        OK [installed binary and cached]
+- Installing cellranger ...                     OK [installed binary and cached]
+- Installing ids ...                            OK [installed binary and cached]
+- Installing googlesheets4 ...                  OK [installed binary and cached]
+- Installing bit ...                            OK [installed binary and cached]
+- Installing bit64 ...                          OK [installed binary and cached]
+- Installing tzdb ...                           OK [installed binary and cached]
+- Installing progress ...                       OK [installed binary and cached]
+- Installing vroom ...                          OK [installed binary and cached]
+- Installing readr ...                          OK [installed binary and cached]
+- Installing haven ...                          OK [installed binary and cached]
+- Installing modelr ...                         OK [installed binary and cached]
+- Installing readxl ...                         OK [installed binary and cached]
+- Installing reprex ...                         OK [installed binary and cached]
+- Installing selectr ...                        OK [installed binary and cached]
+- Installing rvest ...                          OK [installed binary and cached]
+- Installing tidyverse ...                      OK [installed binary and cached]
+Successfully installed 40 packages in 2.6 seconds.
+> unemp_2013 <- readr::read_csv("https://raw.githubusercontent.com/b-rodrigues/modern_R/master/datasets/unemployment/unemp_2013.csv")
+Rows: 118 Columns: 8                             
+── Column specification ───────────────────────────
+Delimiter: ","
+chr (1): Commune
+dbl (7): Total employed population, of which: W...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+> clean
+Error: object 'clean' not found
+> clean_unemp(unemp_2013,)
+# A tibble: 118 × 2
+    year commune                  
+   <dbl> <chr>                    
+ 1  2013 Grand-Duche de Luxembourg
+ 2  2013 Canton Capellen          
+ 3  2013 Dippach                  
+ 4  2013 Garnich                  
+ 5  2013 Hobscheid                
+ 6  2013 Kaerjeng                 
+ 7  2013 Kehlen                   
+ 8  2013 Koerich                  
+ 9  2013 Kopstal                  
+10  2013 Mamer                    
+# ℹ 108 more rows
+# ℹ Use `print(n = ...)` to see more rows
+> clean_unemp(unemp_2013,
++             !grepl("(Canton|Grand-D.*)", commune),
++             active_population) %>%
++     readr::write_csv("tests/testthat/test_data_communes.csv")
+                                                 
+> clean_unemp(unemp_2013,
++             !grepl("(Canton|Grand-D.*)", commune),
++             active_population) %>%
++     readr::write_csv("tests/testthat/test_data_communes.csv")
+                                                 
+> clean_unemp(unemp_2013,
++             grepl("Canton", commune),
++             active_population) %>%
++     readr::write_csv("tests/testthat/test_data_cantons.csv")
+                                                 
+> usethis::use_data_raw()
+✔ Creating data-raw/.
+✔ Adding "^data-raw$" to .Rbuildignore.
+✔ Writing data-raw/DATASET.R.
+☐ Modify data-raw/DATASET.R.
+☐ Finish writing the data preparation script in
+  data-raw/DATASET.R.
+☐ Use `usethis::use_data()` to add prepared data
+  to package.
+> devtools::load_all(".")
+ℹ Loading unemp_lux_r4m
+> data(unemp)
+> count(unemp, year)
+Error in count(unemp, year) : could not find function "count"
+> devtools::load_all(".")
+ℹ Loading unemp_lux_r4m
+> count(unemp, year)
+Error in count(unemp, year) : could not find function "count"
+> library(dplyr)
+
+Attaching package: ‘dplyr’
+
+The following object is masked from ‘package:testthat’:
+
+    matches
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+> count(unemp, year)
+# A tibble: 3 × 2
+   year     n
+  <dbl> <int>
+1  2013   118
+2  2014   118
+3  2015   118
+> devtools::load_all(".")
+ℹ Loading unemp_lux_r4m
+> devtools::test(".")
+ℹ Testing unemp_lux_r4m
+✔ | F W  S  OK | Context
+✖ | 2 1      4 | clean_unemp                       
+───────────────────────────────────────────────────
+Failure (test-clean_unemp.R:32:3): selecting cantons work
+`returned_value` (`actual`) not equal to `expected_value` (`expected`).
+
+`actual` is length 4
+`expected` is length 3
+
+    names(actual)       | names(expected)        
+[1] "year"              | "year"              [1]
+[2] "place_name"        - "commune"           [2]
+[3] "level"             -                        
+[4] "active_population" | "active_population" [3]
+
+`actual$place_name` is a character vector ('Capellen', 'Esch', 'Luxembourg', 'Mersch', 'Clervaux', ...)
+`expected$place_name` is absent
+
+`actual$level` is a character vector ('Canton', 'Canton', 'Canton', 'Canton', 'Canton', ...)
+`expected$level` is absent
+
+`actual$commune` is absent
+`expected$commune` is a character vector ('Canton Capellen', 'Canton Esch', 'Canton Luxembourg', 'Canton Mersch', 'Canton Clervaux', ...)
+
+Failure (test-clean_unemp.R:47:3): selecting communes works
+`returned_value` (`actual`) not equal to `expected_value` (`expected`).
+
+`actual` is length 4
+`expected` is length 3
+
+    names(actual)       | names(expected)        
+[1] "year"              | "year"              [1]
+[2] "place_name"        - "commune"           [2]
+[3] "level"             -                        
+[4] "active_population" | "active_population" [3]
+
+`actual$place_name` is a character vector ('Dippach', 'Garnich', 'Hobscheid', 'Kaerjeng', 'Kehlen', ...)
+`expected$place_name` is absent
+
+`actual$level` is a character vector ('Commune', 'Commune', 'Commune', 'Commune', 'Commune', ...)
+`expected$level` is absent
+
+`actual$commune` is absent
+`expected$commune` is a character vector ('Dippach', 'Garnich', 'Hobscheid', 'Kaerjeng', 'Kehlen', ...)
+
+Warning (test-clean_unemp.R:72:3): wrong commune name
+The returned data frame is empty. This is likely because the `place_name_of_interest` or `level_of_interest` argument supplied does not match any rows in the original data.
+Backtrace:
+    ▆
+ 1. ├─base::as.data.frame(...) at test-clean_unemp.R:72:3
+ 2. └─unemp_lux_r4m::clean_unemp(...)
+───────────────────────────────────────────────────
+
+══ Results ════════════════════════════════════════
+── Failed tests ───────────────────────────────────
+Failure (test-clean_unemp.R:32:3): selecting cantons work
+`returned_value` (`actual`) not equal to `expected_value` (`expected`).
+
+`actual` is length 4
+`expected` is length 3
+
+    names(actual)       | names(expected)        
+[1] "year"              | "year"              [1]
+[2] "place_name"        - "commune"           [2]
+[3] "level"             -                        
+[4] "active_population" | "active_population" [3]
+
+`actual$place_name` is a character vector ('Capellen', 'Esch', 'Luxembourg', 'Mersch', 'Clervaux', ...)
+`expected$place_name` is absent
+
+`actual$level` is a character vector ('Canton', 'Canton', 'Canton', 'Canton', 'Canton', ...)
+`expected$level` is absent
+
+`actual$commune` is absent
+`expected$commune` is a character vector ('Canton Capellen', 'Canton Esch', 'Canton Luxembourg', 'Canton Mersch', 'Canton Clervaux', ...)
+
+Failure (test-clean_unemp.R:47:3): selecting communes works
+`returned_value` (`actual`) not equal to `expected_value` (`expected`).
+
+`actual` is length 4
+`expected` is length 3
+
+    names(actual)       | names(expected)        
+[1] "year"              | "year"              [1]
+[2] "place_name"        - "commune"           [2]
+[3] "level"             -                        
+[4] "active_population" | "active_population" [3]
+
+`actual$place_name` is a character vector ('Dippach', 'Garnich', 'Hobscheid', 'Kaerjeng', 'Kehlen', ...)
+`expected$place_name` is absent
+
+`actual$level` is a character vector ('Commune', 'Commune', 'Commune', 'Commune', 'Commune', ...)
+`expected$level` is absent
+
+`actual$commune` is absent
+`expected$commune` is a character vector ('Dippach', 'Garnich', 'Hobscheid', 'Kaerjeng', 'Kehlen', ...)
+
+[ FAIL 2 | WARN 1 | SKIP 0 | PASS 4 ]
+> clean_unemp(
++     unemp,
++     year_of_interest = 2013,
++     level_of_interest = "Commune",
++     col_of_interest = active_population) %>%
++     readr::write_csv("tests/testthat/test_data_communes.csv")
+                                                 
+> devtools::test(".")
+ℹ Testing unemp_lux_r4m
+✔ | F W  S  OK | Context
+✖ | 1 1      5 | clean_unemp                       
+───────────────────────────────────────────────────
+Failure (test-clean_unemp.R:32:3): selecting cantons work
+`returned_value` (`actual`) not equal to `expected_value` (`expected`).
+
+`actual` is length 4
+`expected` is length 3
+
+    names(actual)       | names(expected)        
+[1] "year"              | "year"              [1]
+[2] "place_name"        - "commune"           [2]
+[3] "level"             -                        
+[4] "active_population" | "active_population" [3]
+
+`actual$place_name` is a character vector ('Capellen', 'Esch', 'Luxembourg', 'Mersch', 'Clervaux', ...)
+`expected$place_name` is absent
+
+`actual$level` is a character vector ('Canton', 'Canton', 'Canton', 'Canton', 'Canton', ...)
+`expected$level` is absent
+
+`actual$commune` is absent
+`expected$commune` is a character vector ('Canton Capellen', 'Canton Esch', 'Canton Luxembourg', 'Canton Mersch', 'Canton Clervaux', ...)
+
+Warning (test-clean_unemp.R:72:3): wrong commune name
+The returned data frame is empty. This is likely because the `place_name_of_interest` or `level_of_interest` argument supplied does not match any rows in the original data.
+Backtrace:
+    ▆
+ 1. ├─base::as.data.frame(...) at test-clean_unemp.R:72:3
+ 2. └─unemp_lux_r4m::clean_unemp(...)
+───────────────────────────────────────────────────
+
+══ Results ════════════════════════════════════════
+── Failed tests ───────────────────────────────────
+Failure (test-clean_unemp.R:32:3): selecting cantons work
+`returned_value` (`actual`) not equal to `expected_value` (`expected`).
+
+`actual` is length 4
+`expected` is length 3
+
+    names(actual)       | names(expected)        
+[1] "year"              | "year"              [1]
+[2] "place_name"        - "commune"           [2]
+[3] "level"             -                        
+[4] "active_population" | "active_population" [3]
+
+`actual$place_name` is a character vector ('Capellen', 'Esch', 'Luxembourg', 'Mersch', 'Clervaux', ...)
+`expected$place_name` is absent
+
+`actual$level` is a character vector ('Canton', 'Canton', 'Canton', 'Canton', 'Canton', ...)
+`expected$level` is absent
+
+`actual$commune` is absent
+`expected$commune` is a character vector ('Canton Capellen', 'Canton Esch', 'Canton Luxembourg', 'Canton Mersch', 'Canton Clervaux', ...)
+
+[ FAIL 1 | WARN 1 | SKIP 0 | PASS 5 ]
+> clean_unemp(
++     unemp,
++     year_of_interest = 2013,
++     level_of_interest = "Commune",
++     col_of_interest = active_population) %>%
++     readr::write_csv("tests/testthat/test_data_communes.csv")
+                                                              
+> devtools::test(".")
+ℹ Testing unemp_lux_r4m
+✔ | F W  S  OK | Context
+✖ | 1 1      5 | clean_unemp                                    
+────────────────────────────────────────────────────────────────
+Failure (test-clean_unemp.R:32:3): selecting cantons work
+`returned_value` (`actual`) not equal to `expected_value` (`expected`).
+
+`actual` is length 4
+`expected` is length 3
+
+    names(actual)       | names(expected)        
+[1] "year"              | "year"              [1]
+[2] "place_name"        - "commune"           [2]
+[3] "level"             -                        
+[4] "active_population" | "active_population" [3]
+
+`actual$place_name` is a character vector ('Capellen', 'Esch', 'Luxembourg', 'Mersch', 'Clervaux', ...)
+`expected$place_name` is absent
+
+`actual$level` is a character vector ('Canton', 'Canton', 'Canton', 'Canton', 'Canton', ...)
+`expected$level` is absent
+
+`actual$commune` is absent
+`expected$commune` is a character vector ('Canton Capellen', 'Canton Esch', 'Canton Luxembourg', 'Canton Mersch', 'Canton Clervaux', ...)
+
+Warning (test-clean_unemp.R:72:3): wrong commune name
+The returned data frame is empty. This is likely because the `place_name_of_interest` or `level_of_interest` argument supplied does not match any rows in the original data.
+Backtrace:
+    ▆
+ 1. ├─base::as.data.frame(...) at test-clean_unemp.R:72:3
+ 2. └─unemp_lux_r4m::clean_unemp(...)
+────────────────────────────────────────────────────────────────
+
+══ Results ═════════════════════════════════════════════════════
+── Failed tests ────────────────────────────────────────────────
+Failure (test-clean_unemp.R:32:3): selecting cantons work
+`returned_value` (`actual`) not equal to `expected_value` (`expected`).
+
+`actual` is length 4
+`expected` is length 3
+
+    names(actual)       | names(expected)        
+[1] "year"              | "year"              [1]
+[2] "place_name"        - "commune"           [2]
+[3] "level"             -                        
+[4] "active_population" | "active_population" [3]
+
+`actual$place_name` is a character vector ('Capellen', 'Esch', 'Luxembourg', 'Mersch', 'Clervaux', ...)
+`expected$place_name` is absent
+
+`actual$level` is a character vector ('Canton', 'Canton', 'Canton', 'Canton', 'Canton', ...)
+`expected$level` is absent
+
+`actual$commune` is absent
+`expected$commune` is a character vector ('Canton Capellen', 'Canton Esch', 'Canton Luxembourg', 'Canton Mersch', 'Canton Clervaux', ...)
+
+[ FAIL 1 | WARN 1 | SKIP 0 | PASS 5 ]
+> clean_unemp(
++     unemp,
++     year_of_interest = 2013,
++     level_of_interest = "Canton",
++     col_of_interest = active_population) %>%
++     readr::write_csv("tests/testthat/test_data_cantons.csv")
+                                                              
+> devtools::test(".")
+ℹ Testing unemp_lux_r4m
+✔ | F W  S  OK | Context
+✔ |   1      6 | clean_unemp                                    
+────────────────────────────────────────────────────────────────
+Warning (test-clean_unemp.R:72:3): wrong commune name
+The returned data frame is empty. This is likely because the `place_name_of_interest` or `level_of_interest` argument supplied does not match any rows in the original data.
+Backtrace:
+    ▆
+ 1. ├─base::as.data.frame(...) at test-clean_unemp.R:72:3
+ 2. └─unemp_lux_r4m::clean_unemp(...)
+────────────────────────────────────────────────────────────────
+
+══ Results ═════════════════════════════════════════════════════
+[ FAIL 0 | WARN 1 | SKIP 0 | PASS 6 ]
